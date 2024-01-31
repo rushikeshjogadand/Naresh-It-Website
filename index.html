@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naresh IT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<style>
+.m1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(public/image/login-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+.m2{
+    background-color:#fff;
+    width: 350px;
+    border-radius: 12px;
+    padding: 30px 30px;
+    height: 480px;
+    
+}
+.m1 input{
+    width: 96%;
+}
+.icon{
+    font-size: 20px;
+}
+
+        #refresh{
+            cursor: pointer;
+            font-weight: bolder;
+            font-size: 20px;
+            color: green;
+        }
+        #rushi{
+            text-align: center;
+            width: 90px;
+            border: none;
+            background-color: rgb(247, 197, 105);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 6px;
+        }
+@media only screen and (max-width: 600px){
+    .m2{
+        height: 500px;
+    }
+}
+</style>
+<script>
+     function change(){
+           var user= document.getElementById("txtName").value;
+           var names=document.getElementById("names");
+           var icon1=document.getElementById("icon1");
+            if(user==="Rushi"){
+                names.innerHTML="";
+                icon1.style.color="green";
+            }
+            else{
+                names.innerHTML="Invalid User Name".fontcolor('red');
+                icon1.style.color="red";
+            }
+            
+        }
+
+        function passchange(){
+            var pass= document.getElementById("txtPass").value;
+           var passm=document.getElementById("passs");
+           var icon2=document.getElementById("icon2");
+            if(pass==="Rushi@123"){
+                passm.innerHTML="";
+                icon2.style.color="green";
+            }
+            else{
+                passm.innerHTML="Invalid User Name".fontcolor('red');
+                icon2.style.color="red";
+            }
+            
+        }
+
+    function VerifyCaptcha(){
+        var Rushi = document.getElementById("rushi").value;
+        var Captcha = document.getElementById("txtCap").value;
+        var icon3=document.getElementById("icon3");
+        var captch = document.getElementById("captch");
+
+        if(Rushi===Captcha){
+            captch.innerHTML="";
+            icon3.style.color="green";
+        }
+        else{
+            captch.innerHTML="Invalid Captcha Code".fontcolor('red');
+            icon3.style.color="red";
+        }
+    }
+    function verifypass(){
+        var user=document.getElementById("txtName").value;
+        var pass=document.getElementById("txtPass").value;
+        var Rushi = document.getElementById("rushi").value;
+        var Captcha = document.getElementById("txtCap").value;
+        if(user==="Rushi" && pass==="Rushi@123"  && Rushi===Captcha ){
+              location.href='public/index1.html'; 
+            
+        }  
+    } 
+
+    
+    function Captcha(){
+        var code = "";
+            var a = Math.random() * 10;
+            var b = Math.random() * 10;
+            var c = Math.random() * 10;
+            var d = Math.random() * 10;
+            var e = Math.random() * 10;
+            var f = Math.random() * 10;
+
+            code = `${Math.round(a)}${Math.round(b)}${Math.round(c)}${Math.round(d)}${Math.round(e)}${Math.round(f)}`
+            document.getElementById("rushi").value=code;
+  
+        }
+        function Bodyload(){
+            Captcha();
+        }
+
+        function RepetCaptcha(){
+            Captcha()
+        }
+</script>
+</head>
+<body onload="Bodyload()">
+    <div class="container-fluid m1 d-flex justify-content-center">
+       <div>
+        <h1 class="text-light mb-4">ACCOUNT LOGIN</h1>
+       </div>
+      
+        <div class="m2">
+            <div class="user">
+                <span class="bi bi-person-fill me-2 icon" id="icon1"></span>
+                <b><span> User name</span></b>
+                <input type="text" id="txtName" required  onkeyup="change()" maxlength="10" class="form-control mt-2">
+                <span id="names"></span>
+            </div>
+            <div class="mt-4">
+                 <span class="bi bi-lock-fill me-2 icon" id="icon2"></span>
+               <b> <span> Password</span></b>
+                <input type="password" onkeyup="passchange()" id="txtPass" required maxlength="10" class="form-control mt-2" size="30">
+                <span id="passs"></span>
+            </div>
+
+            <div class="mt-4"> 
+              <b> <span> Verify Captcha </span></b>
+               <div class="mt-2 fs-5 ">  <input id="rushi" value=""  type="text">  <span id="refresh"  onclick="RepetCaptcha()"  class="bi bi-arrow-clockwise  ms-2"></span>
+                
+            </div>
+               
+           </div>
+
+           <div class="mt-2">
+            <span class="bi bi-check-circle-fill icon me-2" id="icon3"></span>
+          <b> <span> Enter Captcha</span></b>
+           <input type="text"  id="txtCap" onkeyup="VerifyCaptcha()" required  class="form-control mt-2"> 
+           <span id="captch"></span>
+       </div>
+
+            <div align="center" class="mt-4">
+                <button class="btn btn-primary ps-5 pe-5" onclick="verifypass()">LOGIN</button>
+            </div>
+        </div>
+     
+    </div>
+</body>
+</html>
