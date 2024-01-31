@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        nav a {
+            text-decoration: none;
+            color: #eee;
+            margin-right: 10px;
+        }
+        nav a:hover{
+            color: #94feef;
+        }
+        nav span {
+            font-size: 16px;
+            color: #eee;
+            padding: 5px 5px;
+            display: inline-block;
+        }
+        nav div .dropdown {
+            margin-right: 20px;
+        }
+        nav div .dropdown span {
+            font-size: 14px;
+        }
+        nav div .dropdown button {
+            border: none;
+        }
+        .dropdown-menu span {
+            color: black;
+        }
+        .d2 {
+            margin-top: 30px;
+            height: 750px;
+            align-items: center;
+        }
+        .d1 {
+            width: 37%;
+            height: 100%;
+            box-shadow: rgba(14, 13, 13, 0.35) 3px 15px 15px;
+        }
+        main img{
+            margin-top: -400px;
+        }
+        footer {
+            margin-top: 40px;
+            color: #fff;
+            background-color: #333;
+        }
+        .a1 {
+            width: 100%;
+            height: 190px;
+        }
+        footer .ico {
+            width: 30%;
+        }
+        .d5 {
+            width: 69%;
+            flex-wrap: wrap;
+        }
+        .d4 {
+            width: 50%;
+        }
+        footer ul {
+            line-height: 40px;
+            list-style: none;
+        }
+        footer ul a{
+            text-decoration: none;
+            color: #fff;
+        }
+        footer ul a:hover{
+            color: orangered;
+        }
+        @media only screen and (max-width: 600px) {
+            .d1 {
+                width: 100%;
+                height: 76vh;
+            }
+
+            .a1 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 28%;
+            }
+            .ico {
+                width: 100%;
+            }
+            .d5 {
+                width: 100%;
+                height: 350px;
+            }
+            .d4 {
+                width: 100%;
+            }
+            footer ul {
+                line-height: 30px;
+                font-size: 14px;
+            }
+            .d2{
+                margin-top: 90px;
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 10px;
+                height: 950px;
+            }
+            main img{
+              margin-top: 0px;
+            }
+            .d1 button{
+                margin-top: 20px;
+            }
+            .d1 {
+              height: 100%;
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="menu">
+                        <span><a href="index1.html"><span class="bi bi-house-door-fill"></span>Home</a></span>
+                        <span><a href="about.html"><span class="bi bi-info-circle-fill"></span>About</a></span>
+                        <span><a href="service.html"><span class="bi bi-info-square-fill"></span>Service</a></span>
+                        <span><a href="contact.html"><span class="bi bi-phone"></span>Contact us</a></span>
+                    </div>
+                   <div>
+                    <div class="dropdown ">
+                        <button class="btn btn-secondary dropdown-toggle bg-dark me-5" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="bi bi-box-arrow-in-right"></span>Sign in
+                        </button>
+                        <ul class="dropdown-menu  ">
+                            <li><a class="dropdown-item " href="sing-in.html"> <span
+                                        class="bi bi-box-arrow-in-right"></span>Sign in</a></li>
+                            <li><a class="dropdown-item" href="sing-up.html"> <span class="bi bi-person-add"></span>Sign
+                                    up</a></li>
+                            <li><a class="dropdown-item" href="change-password.html"><span
+                                        class="bi bi-lock-fill"></span>Change
+                                    Password</a></li>
+                        </ul>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid d-flex justify-content-evenly d2">
+            <div>
+                
+            </div>
+            <div class="d1">
+                <h3 align="center" class="mt-4">Registration Form</h3>
+                <form action="#" class="m-4">
+                    <label for="name" class="form-label"><b>Full Name :</b></label>
+                    <div>
+                       <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" >
+                    </div>
+                    <label for="email" class="form-label"><b>Email :</b></label>
+                    <div>
+                       <input type="email" id="email" name="email" placeholder="Email Id" class="form-control" >
+                    </div>
+                    <label for="mobaile" class="form-label"><b>Mobaile :</b></label>
+                    <div>
+                       <input type="number" id="mobaile" name="mobaile" class="form-control" >
+                    </div>
+                    <label for="date" class="form-label"><b>Date :</b></label>
+                    <div>
+                       <input type="date" id="date" name="date" class="form-control" >
+                    </div>
+                    <label for="image" class="form-label"><b>Image :</b></label>
+                    <div>
+                       <input type="file" id="image" name="image" class="form-control" >
+                    </div>
+                    <label for="password" class="form-label"><b>Password :</b></label>
+                    <div>
+                       <input type="password" id="password" name="password" class="form-control" >
+                    </div>
+                    <label for="con-password" class="form-label"><b>Confirm Password :</b></label>
+                    <div>
+                       <input type="password" id="con-password" name="con-password" class="form-control" >
+                    </div>
+                    <div class="mt-2 mb-2">
+                        <label for="" class="form-check-label"><b>Gender :</b></label>
+                       <input type="radio"> Male
+                       <input type="radio"> Female
+                    </div>
+                    <div class="mt-4 mb-4">
+                       <input type="checkbox"> I've read and Accept the <span class="text-danger">Terms and Condition</span>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-warning text-light me-5"> Already you have an account</button>
+                        <button type="submit" class="btn btn-success "> Register</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <img src="image/9.png" alt="" width="160px" height="160px">
+            </div>
+           
+        </div>
+    </main>
+    <footer>
+        <h4 align="center" class="p-3">Naresh Technologies</h4>
+        <div class="a1 d-flex justify-content-between">
+            <div class=" ico">
+                <ul>
+                    <li><a href="#"><span class="bi bi-facebook">Facebook</span></a></li>
+                    <li><a href="#"><span class="bi bi-envelope-fill"></span> Google</a></li>
+                    <li><a href="#"><span class="bi bi-twitter"></span> Twitter</a></li>
+                    <li><a href="#"><span class="bi bi-youtube"></span> Youtube</a></li>
+                </ul>
+            </div>
+            <div class="d5 d-flex justify-content-between">
+                <div class="d4">
+                    <ul>
+                        <li> <a href="index1.html"><b>Home</b></a></li>
+                        <li> <a href="about.html"><b>About</b></a></li>
+                        <li> <a href="service.html"><b>Service</b></a></li>
+                        <li> <a href="contact.html"><b>Contact</b></a></li>
+                    </ul>
+                </div>
+                <div class="d4">
+                    <ul>
+                        <li> <b> Name: </b> Naresh Technologies</li>
+                        <li> <b> Email ID: </b> info@nareshot.com</li>
+                        <li> <b> Contact Number: </b> +91-xxxxxxxxxx</li>
+                        <li> <b> Address: </b> Hyderabad, India</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
